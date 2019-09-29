@@ -1,0 +1,7 @@
+node_modules/*
+package-lock.json
+config/config.js
+credentials.json
+token.json
+tmp/result.yaml
+.DS_Store

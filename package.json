@@ -1,0 +1,20 @@
+{
+  "name": "gsheet2yml",
+  "version": "1.0.0",
+  "description": "Convert google sheet data to yaml format",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "google",
+    "sheet"
+  ],
+  "author": "Joey",
+  "license": "ISC",
+  "dependencies": {
+    "googleapis": "^43.0.0",
+    "js-yaml": "^3.13.1",
+    "xlsx": "^0.15.1"
+  }
+}
