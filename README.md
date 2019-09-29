@@ -9,7 +9,7 @@ A repo to read and convert google sheet data to yaml file.
 4. Run `make init_config` to init config file.
 5. Modify the `config/config.js` file as your like.
   - When first run, you need to generate `credentials.json` file and set path.(check in `config/config.js` )
-6. Run `node index.js`.
+6. Run `node index.js` and get result under `tmp/result.yaml`.
 
 ## Note: 
 
