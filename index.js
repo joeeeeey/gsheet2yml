@@ -1,23 +1,8 @@
 const yaml = require("js-yaml");
 const fs = require("fs");
-// const XLSX = require("xlsx");
-// const readline = require('readline');
 const { google } = require("googleapis");
 const { authorize } = require("./utils/google_auth");
 const config = require('./config/config');
-
-// // ====== SET CONFIG HERE ======
-
-// // Sheet 里面应当保持统一的格式，否则请规定要读取的范围
-// const SPECIFIED_RANGE = "Sheet1!A1:B3";
-// // 我会认为左边一列死翻译的 key, 但从数据来看并不是这样
-// // 若右边一列是翻译的 key, 则设置为 true
-// const LEFT_COLUMN_IS_KEY = false;
-
-// const SPREAD_SHEET_ID = "1xYouZXzx6tbPWaI40aM6vxo59A6lXb4HZkFonV6-dho";
-
-// const CREDENTIAL_PATH = 'credentials.json';
-// // ====== AFTER SET CONFIG ======
 
 const {
   SPREAD_SHEET_ID,
@@ -26,9 +11,6 @@ const {
   CREDENTIAL_PATH,
 } = config
 
-
-// Get credentials.json
-// https://developers.google.com/sheets/api/quickstart/nodejs
 
 // Load client secrets from a local file.
 fs.readFile(CREDENTIAL_PATH, (err, content) => {
@@ -48,6 +30,8 @@ const writeJson2Yaml = rows => {
     // console.log('formatedData: ', formatedData);
   });
 
+  // See more dump params at:
+  // https://github.com/nodeca/js-yaml#safedump-object---options-
   const res = yaml.safeDump(formatedData, {
     styles: {
       "!!null": "canonical" // dump null as ~
